@@ -1,0 +1,19 @@
+{
+    "name": "php/mvc",
+    "authors": [
+        {
+            "name": "Abdalmonaem",
+            "email": "abdalmonaem.gamal@gmail.com"
+        }
+    ],
+    "autoload" : {
+        "psr-4": {
+            "App\\" : "App/",
+            "MVC\\" : "src/"
+        }         
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.4",
+        "symfony/var-dumper": "^5.4"
+    }
+}
