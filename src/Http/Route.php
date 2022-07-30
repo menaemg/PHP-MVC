@@ -2,6 +2,8 @@
 
 namespace MVC\Http;
 
+use MVC\View\View;
+
 class Route
 {
     public Request $Request;
@@ -29,12 +31,12 @@ class Route
         $path = $this->Request->path();
         $method = $this->Request->method();
         $params = $this->Request->params();
-        var_dump($params);
         $action = self::$routes[$method][$path] ?? false;
 
-        if(!$action){
-            return;
+        if (!array_key_exists($path , self::$routes[$method])){
+            View::makeError('404');
         }
+
         // return $action;
 
         //404 Handling

@@ -2,10 +2,12 @@
 
 namespace App\Controllers;
 
+use MVC\View\View;
+
 class HomeController
 {
     public function index()
     {
-        echo "home";
+        return view('home');
     }
 }
